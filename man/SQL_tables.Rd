@@ -4,5 +4,8 @@
 \alias{SQL_tables}
 \title{SQL_tables}
 \description{
-List available tables from SQL database
+Call function to list available tables in COI SQL database
+}
+\author{
+brian devoe
 }
