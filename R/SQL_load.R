@@ -1,5 +1,6 @@
 #' @name SQL_load
 #' @title SQL_load
+#' @author brian devoe
 #' @description load table from SQL database
 #' @param table name of table from SQL coi database to load into R environment. See SQL_table function for list of tables.
 

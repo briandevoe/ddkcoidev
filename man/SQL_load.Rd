@@ -9,3 +9,6 @@
 \description{
 load table from SQL database
 }
+\author{
+brian devoe
+}
