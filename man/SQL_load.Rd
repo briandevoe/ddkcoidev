@@ -3,6 +3,9 @@
 \name{SQL_load}
 \alias{SQL_load}
 \title{SQL_load}
+\arguments{
+\item{table}{name of table from SQL coi database to load into R environment. See SQL_table function for list of tables.}
+}
 \description{
 load table from SQL database
 }
