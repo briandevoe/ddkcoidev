@@ -1,6 +1,7 @@
 #' @name SQL_tables
 #' @title SQL_tables
-#' @description List available tables from SQL database
+#' @author brian devoe
+#' @description Call function to list available tables in COI SQL database
 
 # libraries
 library(RMariaDB)
