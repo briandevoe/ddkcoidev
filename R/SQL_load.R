@@ -15,7 +15,7 @@ load_db <- function(table = NULL){
                    user='dba1', password='Password123$')
 
   # connect to coi database
-  dbGetQuery(con, "USE coi")
+  dbGetQuery(con, "USE coi;")
 
   # load table
   dt <- dbGetQuery(con, paste0("SELECT * FROM ", table, ";"))
