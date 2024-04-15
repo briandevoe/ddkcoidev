@@ -5,5 +5,4 @@
 ## usethis namespace: end
 NULL
 
-#' @description
-#' A short description...
+#' @description Here is an example of a package DESCRIPTION file:
