@@ -8,11 +8,7 @@
 #' @param infile path to file to write to SQL database
 #' @param table_name name of table to write to in SQL database
 
-# libraries
-# library(data.table)
-# library(tidyverse)
-# library(RMariaDB)
-
+#FIXME: Need to work on this function some more. It is not working as intended.
 
 SQL_write <- function(infile = NULL, table_name = NULL){
 
@@ -22,8 +18,6 @@ SQL_write <- function(infile = NULL, table_name = NULL){
   #-----------------------------------------
   # read table
   table <- read.csv(infile, colClasses="character")
-  # table <- read.csv(infile)
-  # table <- fread(infile)
 
   # column names
   names <- colnames(table)
