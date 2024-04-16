@@ -8,7 +8,7 @@
 library(RMariaDB)
 
 # function: load_db
-load_db <- function(table = NULL){
+SQL_load <- function(table = NULL){
 
   # Connect to Brandeis office SQL database
   # TODO: throw error if not connected to pulse

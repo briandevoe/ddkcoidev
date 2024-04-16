@@ -7,7 +7,7 @@
 library(RMariaDB)
 
 # function list tables
-list_tables <- function(){
+SQL_tables <- function(){
 
   # Connect to Brandeis office SQL database
   # TODO: throw error if not connected to pulse

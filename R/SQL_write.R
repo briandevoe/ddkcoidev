@@ -11,7 +11,7 @@ library(tidyverse)
 library(RMariaDB)
 
 
-write_db <- function(infile = NULL, table_name = NULL){
+SQL_write <- function(infile = NULL, table_name = NULL){
 
 
   # need to get table names from infile
