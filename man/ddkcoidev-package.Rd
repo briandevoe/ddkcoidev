@@ -4,8 +4,19 @@
 \name{ddkcoidev-package}
 \alias{ddkcoidev}
 \alias{ddkcoidev-package}
-\title{ddkcoidev: What the Package Does (Title Case)}
+\title{ddkcoidev}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+ddkcoidev is an internal library to be used by our Data and Development team at Data Diversity Kids
+for the development of the Child Opportunity Index (COI) and other related projects.
+}
+\details{
+More detailed documentation here. We can also link to vignettes, describe main functions, describe
+built in data, use examples, and provide references to other documentation.
+}
+\seealso{
+git repo:  \url{https://github.com/briandevoe/ddkcoidev}
+}
+\author{
+Brian DeVoe
 }
 \keyword{internal}
