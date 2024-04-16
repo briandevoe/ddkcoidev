@@ -9,9 +9,9 @@
 #' @param table_name name of table to write to in SQL database
 
 # libraries
-library(data.table)
+# library(data.table)
 # library(tidyverse)
-library(RMariaDB)
+# library(RMariaDB)
 
 
 SQL_write <- function(infile = NULL, table_name = NULL){
@@ -21,7 +21,9 @@ SQL_write <- function(infile = NULL, table_name = NULL){
   # TODO: make this part of the script more efficient
   #-----------------------------------------
   # read table
-  table <- fread(infile)
+  table <- read.csv(infile, colClasses="character")
+  # table <- read.csv(infile)
+  # table <- fread(infile)
 
   # column names
   names <- colnames(table)
@@ -51,13 +53,13 @@ SQL_write <- function(infile = NULL, table_name = NULL){
 
   # Connect to Brandeis office SQL database
   # TODO: throw error if not connected to pulse
-  con <- dbConnect(RMariaDB::MariaDB(),
+  con <- RMariaDB::dbConnect(RMariaDB::MariaDB(),
                    host='129.64.58.140', port=3306,
                    user='dba1', password='Password123$')
 
   # select coi db
   # dbGetQuery(con, "USE coi;")
-  dbGetQuery(con, "USE coi_test;")
+  RMariaDB::dbGetQuery(con, "USE coi_test;")
 
 
 
@@ -72,17 +74,17 @@ SQL_write <- function(infile = NULL, table_name = NULL){
 
   # create table
   create_table <- paste0("CREATE TABLE ", table_name, " (", names_str, ");")
-  dbExecute(con, create_table)
+  RMariaDB::dbExecute(con, create_table)
   rm(create_table)
 
   # write table
   start <- Sys.time()
   query <- paste0("LOAD DATA LOCAL INFILE '", infile_path, "' INTO TABLE ", table_name," FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';")
-  dbGetQuery(con, query)
+  RMariaDB::dbGetQuery(con, query)
   end <- Sys.time()
 
   # disconnect from server
-  dbDisconnect(con);rm(con)
+  RMariaDB::dbDisconnect(con);rm(con)
 
   return(paste0("Time to write table: ", end-start))
 

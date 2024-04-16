@@ -6,9 +6,6 @@
 #' Call function to list available tables in COI SQL database
 #'
 
-# libraries
-# library(RMariaDB)
-
 # function list tables
 SQL_tables <- function(){
 
