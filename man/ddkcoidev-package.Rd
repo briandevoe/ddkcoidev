@@ -4,7 +4,7 @@
 \name{ddkcoidev-package}
 \alias{ddkcoidev}
 \alias{ddkcoidev-package}
-\title{ddkcoidev}
+\title{ddkcoidev - Data Diversity Kids COI Development Library}
 \description{
 ddkcoidev is an internal library to be used by our Data and Development team at Data Diversity Kids
 for the development of the Child Opportunity Index (COI) and other related projects.

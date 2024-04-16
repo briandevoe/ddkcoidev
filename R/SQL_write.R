@@ -1,13 +1,16 @@
 #' @name SQL_write
 #' @title SQL_write
 #' @author brian devoe
-#' @description write table from given directory to COI SQL database
+#'
+#' @description
+#' write table from given directory to COI SQL database
+#'
 #' @param infile path to file to write to SQL database
 #' @param table_name name of table to write to in SQL database
 
 # libraries
 library(data.table)
-library(tidyverse)
+# library(tidyverse)
 library(RMariaDB)
 
 
