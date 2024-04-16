@@ -25,7 +25,7 @@ SQL_tables <- function(){
   tables <- RMariaDB::dbGetQuery(con, "SHOW TABLES;")
 
   # disconnect from server
-  dbDisconnect(con);rm(con)
+  RMariaDB::dbDisconnect(con);rm(con)
 
   # return
   return(tables)
