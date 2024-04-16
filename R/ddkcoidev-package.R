@@ -1,8 +1,8 @@
 # heading ------------------------------------------------------------------------------------------
 
 #' @keywords internal
-#' @title ddkcoidev - Data Diversity Kids COI Development Library
-#' @author Brian DeVoe
+#' @title   ddkcoidev - Data Diversity Kids COI Development Library
+#' @author  Brian DeVoe
 #' @seealso git repo:  \url{https://github.com/briandevoe/ddkcoidev}
 
 # body ---------------------------------------------------------------------------------------------
@@ -18,9 +18,6 @@
 #' @details
 #' More detailed documentation here. We can also link to vignettes, describe main functions, describe
 #' built in data, use examples, and provide references to other documentation.
-
-
-
 
 
 # end ----------------------------------------------------------------------------------------------
