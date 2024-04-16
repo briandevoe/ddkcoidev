@@ -16,6 +16,4 @@ Suggests:
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 Imports: 
-    RMariaDB,
-    data.table,
-    tidyverse
+    RMariaDB
