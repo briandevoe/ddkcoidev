@@ -5,9 +5,10 @@
 #' @description
 #' Call function to list available tables in COI SQL database
 #'
+#' @param database name of database to write to in SQL database
 
 # function list tables
-SQL_tables <- function(){
+SQL_tables <- function(database = NULL){
 
   # Connect to Brandeis office SQL database
   # TODO: throw error if not connected to pulse
@@ -16,7 +17,7 @@ SQL_tables <- function(){
                    user='dba1', password='Password123$')
 
   # connect to coi database
-  RMariaDB::dbGetQuery(con, "USE coi")
+  RMariaDB::dbGetQuery(con, paste0("USE ", database, ";"))
 
   # load table
   tables <- RMariaDB::dbGetQuery(con, "SHOW TABLES;")

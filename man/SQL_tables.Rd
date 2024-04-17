@@ -4,7 +4,10 @@
 \alias{SQL_tables}
 \title{SQL_tables}
 \usage{
-SQL_tables()
+SQL_tables(database = NULL)
+}
+\arguments{
+\item{database}{name of database to write to in SQL database}
 }
 \description{
 Call function to list available tables in COI SQL database
