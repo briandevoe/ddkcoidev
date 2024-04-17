@@ -3,6 +3,9 @@
 \name{SQL_tables}
 \alias{SQL_tables}
 \title{SQL_tables}
+\usage{
+SQL_tables()
+}
 \description{
 Call function to list available tables in COI SQL database
 }

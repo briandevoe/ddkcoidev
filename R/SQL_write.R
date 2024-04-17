@@ -7,10 +7,11 @@
 #'
 #' @param infile path to file to write to SQL database
 #' @param table_name name of table to write to in SQL database
+#' @param database name of database to write to in SQL database
 
 #FIXME: Need to work on this function some more. It is not working as intended.
 
-SQL_write <- function(infile = NULL, table_name = NULL){
+SQL_write <- function(infile = NULL, table_name = NULL, database = NULL){
 
 
   # need to get table names from infile
@@ -54,7 +55,7 @@ SQL_write <- function(infile = NULL, table_name = NULL){
 
   # select coi db
   # dbGetQuery(con, "USE coi;")
-  RMariaDB::dbGetQuery(con, "USE coi_test;")
+  RMariaDB::dbGetQuery(con, paste0("USE ", database, ";"))
 
 
 

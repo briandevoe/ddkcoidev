@@ -3,10 +3,15 @@
 \name{SQL_write}
 \alias{SQL_write}
 \title{SQL_write}
+\usage{
+SQL_write(infile = NULL, table_name = NULL, database = NULL)
+}
 \arguments{
 \item{infile}{path to file to write to SQL database}
 
 \item{table_name}{name of table to write to in SQL database}
+
+\item{database}{name of database to write to in SQL database}
 }
 \description{
 write table from given directory to COI SQL database
