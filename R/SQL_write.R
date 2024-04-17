@@ -82,7 +82,8 @@ SQL_write <- function(infile = NULL, table_name = NULL, database = NULL){
 
   # write table
   start <- Sys.time()
-  query <- paste0("LOAD DATA LOCAL INFILE '", infile_path, "' INTO TABLE ", table_name," FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';")
+  # query <- paste0("LOAD DATA LOCAL INFILE '", infile_path, "' INTO TABLE ", table_name," FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';")
+  query <- paste0("LOAD DATA LOCAL INFILE '", infile, "' INTO TABLE ", table_name," FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';")
   RMariaDB::dbGetQuery(con, query)
   end <- Sys.time()
 
