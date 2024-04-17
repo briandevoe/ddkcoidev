@@ -22,7 +22,7 @@ SQL_write <- function(infile = NULL, table_name = NULL){
   # column names
   names <- colnames(table)
   for(i in 1:length(names)){
-    if(names[i] == "group"){names[i] <- "`group` text(11)"}
+    if(names[i] == "group"){names[i] <- "`group`"}
     names[i] <- paste0(names[i], " text(11)")
   }
   # fix column names for sql query
