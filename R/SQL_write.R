@@ -24,14 +24,21 @@ SQL_write <- function(infile = NULL, table_name = NULL, database = NULL){
   names <- colnames(table)
   for(i in 1:length(names)){
     if(names[i] == "group"){names[i] <- "`group`"}
-    names[i] <- paste0(names[i], " text(11)")
+     class <- class(table[,i])
+    if(class == "character"){
+      names[i] <- paste0(names[i], " text(30)")
+    } else if(class == "integer"){
+      names[i] <- paste0(names[i], " int(30)")
+    } else if(class == "numeric"){
+      names[i] <- paste0(names[i], " double(30,30)")
+    }
   }
   # fix column names for sql query
   names_str <- ""
   for(i in 1:length(names)){
     if(i == length(names)){names_str <- paste0(names_str, names[i])}
     else {names_str <- paste0(names_str, names[i], ", ")}
-  }; rm(i,names)
+  }; rm(i,names,class)
 
   rm(table)
   #-----------------------------------------
