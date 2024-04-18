@@ -7,11 +7,9 @@
 #'
 #' @param table name of table from SQL coi database to load into R environment. See SQL_table function for list of tables.
 
-# libraries
-library(RMariaDB)
 
 # function: load_db
-SQL_load <- function(table = NULL){
+SQL_load <- function(table = NULL, database = NULL){
 
   # Connect to Brandeis office SQL database
   # TODO: throw error if not connected to pulse
@@ -20,7 +18,7 @@ SQL_load <- function(table = NULL){
                    user='dba1', password='Password123$')
 
   # connect to coi database
-  RMariaDB::dbGetQuery(con, "USE coi;")
+  RMariaDB::dbGetQuery(con, "USE ", database, ";")
 
   # load table
   dt <- RMariaDB::dbGetQuery(con, paste0("SELECT * FROM ", table, ";"))
