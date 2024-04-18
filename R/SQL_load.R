@@ -6,6 +6,7 @@
 #' load table from SQL database
 #'
 #' @param table name of table from SQL coi database to load into R environment. See SQL_table function for list of tables.
+#' @param database name of database to connect to. Default is 'coi'.
 
 
 # function: load_db
@@ -18,7 +19,7 @@ SQL_load <- function(table = NULL, database = NULL){
                    user='dba1', password='Password123$')
 
   # connect to coi database
-  RMariaDB::dbGetQuery(con, "USE ", database, ";")
+  RMariaDB::dbGetQuery(con, paste0("USE ", database, ";"))
 
   # load table
   dt <- RMariaDB::dbGetQuery(con, paste0("SELECT * FROM ", table, ";"))

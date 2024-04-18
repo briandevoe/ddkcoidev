@@ -3,8 +3,13 @@
 \name{SQL_load}
 \alias{SQL_load}
 \title{SQL_load}
+\usage{
+SQL_load(table = NULL, database = NULL)
+}
 \arguments{
 \item{table}{name of table from SQL coi database to load into R environment. See SQL_table function for list of tables.}
+
+\item{database}{name of database to connect to. Default is 'coi'.}
 }
 \description{
 load table from SQL database
