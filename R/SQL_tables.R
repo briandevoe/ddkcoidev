@@ -5,7 +5,11 @@
 #' @description
 #' Call function to list available tables in COI SQL database
 #'
-#' @param database name of database to write to in SQL database
+#' @param database Name of database to connect to. Default is 'coi'.
+
+
+# TODO: add metadata functionality? it simply attaches to the 'tables' datatable as new columns
+
 
 # function list tables
 SQL_tables <- function(database = NULL){
@@ -17,9 +21,12 @@ SQL_tables <- function(database = NULL){
                    user='dba1', password='Password123$')
 
   # connect to coi database
-  RMariaDB::dbGetQuery(con, paste0("USE ", database, ";"))
+  if(is.null(database)){
+    RMariaDB::dbGetQuery(con, "USE coi;")}
+  if(!is.null(database)){
+    RMariaDB::dbGetQuery(con, paste0("USE ", database, ";"))}
 
-  # load table
+  # load tables list
   tables <- RMariaDB::dbGetQuery(con, "SHOW TABLES;")
 
   # disconnect from server

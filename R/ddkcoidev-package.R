@@ -1,7 +1,7 @@
 # heading ------------------------------------------------------------------------------------------
 
 #' @keywords internal
-#' @title   ddkcoidev - Data Diversity Kids COI Development Library
+#' @title   ddkdevtools - Data Diversity Kids Development Library
 #' @author  Brian DeVoe
 #' @seealso git repo:  \url{https://github.com/briandevoe/ddkcoidev}
 
@@ -11,7 +11,7 @@
 # ~skip 4 lines for new paragraph
 
 #' @description
-#' ddkcoidev is an internal library to be used by our Data and Development team at Data Diversity Kids
+#' ddkdevtools is an internal library to be used by our Data and Development team at Data Diversity Kids
 #' for the development of the Child Opportunity Index (COI) and other related projects.
 
 
